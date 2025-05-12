@@ -20,8 +20,8 @@ jobs:
       run: |
         cd Example
         xcodebuild build \
-          -workspace DIContainer.xcworkspace \
-          -scheme DIContainer-Example \
+          -workspace SafeContinuation.xcworkspace \
+          -scheme SafeContinuation-Example \
           -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
           -configuration Debug \
           -xcconfig DisableSigning.xcconfig
@@ -30,9 +30,9 @@ jobs:
       run: |
         cd Example
         xcodebuild test \
-          -workspace DIContainer.xcworkspace \
-          -scheme DIContainer-Example \
-          -only-testing:DIContainer_Tests \
+          -workspace SafeContinuation.xcworkspace \
+          -scheme SafeContinuation-Example \
+          -only-testing:SafeContinuation_Tests \
           -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
           -configuration Debug \
           -xcconfig DisableSigning.xcconfig
