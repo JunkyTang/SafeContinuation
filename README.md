@@ -1,9 +1,6 @@
 # SafeContinuation
 
-[![CI Status](https://img.shields.io/travis/Lucky/SafeContinuation.svg?style=flat)](https://travis-ci.org/Lucky/SafeContinuation)
-[![Version](https://img.shields.io/cocoapods/v/SafeContinuation.svg?style=flat)](https://cocoapods.org/pods/SafeContinuation)
-[![License](https://img.shields.io/cocoapods/l/SafeContinuation.svg?style=flat)](https://cocoapods.org/pods/SafeContinuation)
-[![Platform](https://img.shields.io/cocoapods/p/SafeContinuation.svg?style=flat)](https://cocoapods.org/pods/SafeContinuation)
+[![CI](https://github.com/JunkyTang/SafeContinuation/actions/workflows/ci.yml/badge.svg)](https://github.com/JunkyTang/SafeContinuation/actions)  [![CD](https://github.com/JunkyTang/SafeContinuation/actions/workflows/cd.yml/badge.svg)](https://github.com/JunkyTang/SafeContinuation/actions)  [![License](https://img.shields.io/github/license/JunkyTang/DIContainer)](https://github.com/JunkyTang/SafeContinuation/blob/main/LICENSE)  [![Release](https://img.shields.io/github/v/release/JunkyTang/SafeContinuation)](https://github.com/JunkyTang/SafeContinuation/releases)
 
 **SafeContinuation** is a lightweight Swift utility that wraps `withCheckedContinuation` with built-in **timeout support**.  
 It is ideal for bridging callback-based APIs (e.g., CoreBluetooth, delegate methods) into Swift's `async/await` world.
