@@ -1,0 +1,16 @@
+PODS:
+  - SafeContinuation (0.1.0)
+
+DEPENDENCIES:
+  - SafeContinuation (from `../`)
+
+EXTERNAL SOURCES:
+  SafeContinuation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SafeContinuation: cdd6c1deff56c51e8e635179bb8851b6796a95d7
+
+PODFILE CHECKSUM: 5c2e1ec6c1952f7b7c69eb99edfa83955a04ae05
+
+COCOAPODS: 1.16.2
