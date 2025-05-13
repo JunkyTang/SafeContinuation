@@ -23,7 +23,7 @@ jobs:
         run: |
           branch="${{ github.head_ref }}"
           version="${branch#releases/}"
-          tag="v$version"
+          tag="$version"
           echo "tag=$tag" >> $GITHUB_OUTPUT
 
       - name: Create Tag
