@@ -8,7 +8,7 @@ on:
 
 jobs:
   auto-tag:
-    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'release/')
+    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'releases/')
     runs-on: macos-latest
 
     steps:
@@ -22,7 +22,7 @@ jobs:
         id: get_tag
         run: |
           branch="${{ github.head_ref }}"
-          version="${branch#release/}"
+          version="${branch#releases/}"
           tag="v$version"
           echo "tag=$tag" >> $GITHUB_OUTPUT
 
