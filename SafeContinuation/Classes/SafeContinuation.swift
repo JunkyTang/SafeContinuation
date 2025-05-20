@@ -17,17 +17,21 @@ public actor SafeContinuation<T> {
     private var didResume = false
     private let continuation: CheckedContinuation<T, Error>
     private var timeout: TimeInterval
+    private var task: Task<Void, Never>?
     
     internal init(_ continuation: CheckedContinuation<T, Error>, timeout: TimeInterval) {
         self.continuation = continuation
         self.timeout = timeout
     }
     
+    deinit {
+        print("✅ SafeContinuation has been deinitialized")
+    }
     
     public func startTimer() {
-        Task {
+        task = Task {
             try? await Task.sleep(nanoseconds: UInt64(timeout * 1_000_000_000))
-            self.timeoutIfNeeded()
+            timeoutIfNeeded()
         }
     }
     
@@ -35,6 +39,7 @@ public actor SafeContinuation<T> {
     public func timeoutIfNeeded() {
         guard !didResume else { return }
         didResume = true
+        task?.cancel()
         continuation.resume(throwing: ContinuationError.timeout)
     }
     
@@ -42,6 +47,7 @@ public actor SafeContinuation<T> {
     public func resume(returning value: T) {
         guard !didResume else { return }
         didResume = true
+        task?.cancel()
         continuation.resume(returning: value)
     }
     
@@ -49,6 +55,7 @@ public actor SafeContinuation<T> {
     public func resume(throwing error: Error) {
         guard !didResume else { return }
         didResume = true
+        task?.cancel()
         continuation.resume(throwing: error)
     }
 }
