@@ -24,9 +24,9 @@ public actor SafeContinuation<T> {
         self.timeout = timeout
     }
     
-    deinit {
-        print("✅ SafeContinuation has been deinitialized")
-    }
+//    deinit {
+//        print("✅ SafeContinuation has been deinitialized")
+//    }
     
     public func startTimer() {
         task = Task {
