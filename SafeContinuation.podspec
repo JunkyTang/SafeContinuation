@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SafeContinuation'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'SafeContinuation provides async timeout-safe continuation support in Swift.'
 
   s.description      = <<-DESC
