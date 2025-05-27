@@ -2,6 +2,7 @@
 
 ![Build](https://img.shields.io/github/actions/workflow/status/JunkyTang/SafeContinuation/ci.yml)
 ![Version](https://img.shields.io/github/v/release/JunkyTang/SafeContinuation)
+![CocoaPods](https://img.shields.io/badge/CocoaPods-supported-informational?logo=cocoapods)
 ![License](https://img.shields.io/github/license/JunkyTang/SafeContinuation)
 ![Language](https://img.shields.io/github/languages/top/JunkyTang/SafeContinuation)
 ![Coverage](https://img.shields.io/codecov/c/github/JunkyTang/SafeContinuation)
