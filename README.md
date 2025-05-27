@@ -22,7 +22,7 @@ It is ideal for bridging callback-based APIs (e.g., CoreBluetooth, delegate meth
 ### CocoaPods
 
 ```ruby
-pod 'SafeContinuation'
+pod 'SafeContinuation', :git => 'https://github.com/JunkyTang/SafeContinuation.git'
 ```
 
 ---
